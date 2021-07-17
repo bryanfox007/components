@@ -1,0 +1,10 @@
+*.hbs
+*.md
+.cache
+.github
+dist
+docs/*.md
+src/components/icon/icons
+node_modules
+package-lock.json
+tsconfig.json

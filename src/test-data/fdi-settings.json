@@ -1,0 +1,548 @@
+{
+  "module": {
+    "meta": [],
+    "settings": [],
+    "data": {
+      "fields": {
+        "fdi_incentive_refresh_interval": {
+          "key": "fdi_incentive_refresh_interval",
+          "src": "option",
+          "default": 24,
+          "tab": "Site",
+          "label": "Incentive Refresh Interval",
+          "placeholder": "Select One",
+          "component": "select",
+          "dataType": "int",
+          "search_tags": [],
+          "helpText": "How often site vehicles should refresh incentives.",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": false
+          },
+          "opts": [
+            {
+              "display": "24 hours",
+              "value": 24
+            },
+            {
+              "display": "2 hours",
+              "value": 2
+            }
+          ],
+          "value": "24"
+        },
+        "fdi_apply_factory_incentives_to_other_vehicle_types": {
+          "key": "fdi_apply_factory_incentives_to_other_vehicle_types",
+          "component": "select",
+          "src": "option",
+          "default": [],
+          "label": "Apply Incentives to Other Vehicle Types",
+          "placeholder": "Select Multiple",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": true
+          },
+          "dataType": "array",
+          "opts": [
+            {
+              "display": "CTA",
+              "value": "CTA"
+            },
+            {
+              "display": "Demo",
+              "value": "Demo"
+            }
+          ],
+          "value": ["Demo", "CTA"]
+        },
+        "fdi_lease_default_base_price": {
+          "key": "fdi_lease_default_base_price",
+          "component": "select",
+          "src": "option",
+          "default": "msrp_minus_dealer_discount",
+          "tab": "Lease",
+          "label": "Default Lease Base Price",
+          "placeholder": "Select One",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": false
+          },
+          "dataType": "string",
+          "opts": [
+            {
+              "display": "MSRP",
+              "value": "msrp"
+            },
+            {
+              "display": "MSRP - Dealer Discount",
+              "value": "msrp_minus_dealer_discount"
+            },
+            {
+              "display": "Invoice Price",
+              "value": "invoice"
+            }
+          ],
+          "value": ["msrp_minus_dealer_discount"]
+        },
+        "fdi_lease_default_residual_base_price": {
+          "key": "fdi_lease_default_residual_base_price",
+          "component": "select",
+          "src": "option",
+          "default": "msrp",
+          "tab": "Lease",
+          "label": "Default Lease Residual Base Price",
+          "placeholder": "Select One",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": false
+          },
+          "dataType": "string",
+          "opts": [
+            {
+              "display": "MSRP",
+              "value": "msrp"
+            },
+            {
+              "display": "MSRP - Dealer Discount",
+              "value": "msrp_minus_dealer_discount"
+            },
+            {
+              "display": "Invoice Price",
+              "value": "invoice"
+            },
+            {
+              "display": "miscprice2",
+              "value": "miscprice2"
+            }
+          ],
+          "value": ["miscprice2"]
+        },
+        "fdi_default_lease_term": {
+          "key": "fdi_default_lease_term",
+          "component": "select",
+          "src": "option",
+          "default": "",
+          "tab": "Lease",
+          "label": "Default Lease Term",
+          "placeholder": "Select One",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": false
+          },
+          "search_tags": ["length", "offer"],
+          "dataType": "int",
+          "opts": [
+            {
+              "display": "None",
+              "value": ""
+            },
+            {
+              "display": "24 months",
+              "value": 24
+            },
+            {
+              "display": "36 months",
+              "value": 36
+            },
+            {
+              "display": "48 months",
+              "value": 48
+            },
+            {
+              "display": "60 months",
+              "value": 60
+            }
+          ],
+          "value": ""
+        },
+        "fdi_finance_default_base_price": {
+          "key": "fdi_finance_default_base_price",
+          "component": "select",
+          "src": "option",
+          "default": "msrp",
+          "tab": "Finance",
+          "label": "Default Finance Base Price",
+          "placeholder": "Select One",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": false
+          },
+          "opts": [
+            {
+              "display": "MSRP",
+              "value": "msrp"
+            },
+            {
+              "display": "MSRP - Dealer Discount",
+              "value": "msrp_minus_dealer_discount"
+            },
+            {
+              "display": "Invoice Price",
+              "value": "invoice"
+            }
+          ],
+          "value": ["msrp_minus_dealer_discount"]
+        },
+        "fdi_default_finance_term": {
+          "key": "fdi_default_finance_term",
+          "component": "select",
+          "src": "option",
+          "default": "",
+          "tab": "Finance",
+          "label": "Default Finance Term",
+          "placeholder": "Select One",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": false
+          },
+          "search_tags": ["length", "offer"],
+          "dataType": "int",
+          "opts": [
+            {
+              "display": "None",
+              "value": ""
+            },
+            {
+              "display": "24 months",
+              "value": 24
+            },
+            {
+              "display": "36 months",
+              "value": 36
+            },
+            {
+              "display": "48 months",
+              "value": 48
+            },
+            {
+              "display": "60 months",
+              "value": 60
+            },
+            {
+              "display": "72 months",
+              "value": 72
+            },
+            {
+              "display": "84 months",
+              "value": 84
+            },
+            {
+              "display": "96 months",
+              "value": 96
+            }
+          ],
+          "value": ""
+        },
+        "fdi_incentive_source": {
+          "key": "fdi_incentive_source",
+          "component": "select",
+          "src": "option",
+          "default": "",
+          "tab": "",
+          "label": "Default Incentive Source",
+          "placeholder": "Select One",
+          "componentSettings": {
+            "clearable": true,
+            "multiple": false
+          },
+          "search_tags": ["ais", "mscan"],
+          "dataType": "string",
+          "opts": [
+            {
+              "display": "None",
+              "value": "disable"
+            },
+            {
+              "display": "AIS",
+              "value": "ais"
+            },
+            {
+              "display": "Market Scan",
+              "value": "mscan"
+            },
+            {
+              "display": "Feed",
+              "value": "feed"
+            }
+          ],
+          "value": "ais"
+        },
+        "fdi_incentive_zip": {
+          "key": "fdi_incentive_zip",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "",
+          "label": "Incentives Zip Code",
+          "placeholder": "Zip Code",
+          "dataType": "string",
+          "search_tags": ["gmc", "oem"],
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": "91204"
+        },
+        "fdi_mscan_account_num": {
+          "key": "fdi_mscan_account_num",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Market Scan",
+          "label": "Market Scan Account Number",
+          "placeholder": "Account #",
+          "dataType": "string",
+          "search_tags": ["mscan"],
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_add_conditional_programDescription": {
+          "key": "fdi_incentive_add_conditional_programDescription",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Add Conditional Incentives by Program Description",
+          "placeholder": "Program Descriptions",
+          "dataType": "string",
+          "search_tags": [],
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_move_cash_incentive_to_conditional_based_on_program_description": {
+          "key": "fdi_incentive_move_cash_incentive_to_conditional_based_on_program_description",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Move Cash Incentive to Conditional Based on Program Description",
+          "placeholder": "Program Descriptions",
+          "dataType": "string",
+          "search_tags": [],
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_kill_programDescription": {
+          "key": "fdi_incentive_kill_programDescription",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Kill Incentives by Program Description",
+          "placeholder": "Program Descriptions",
+          "dataType": "string",
+          "search_tags": ["remove"],
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_kill_programDescription_regex": {
+          "key": "fdi_incentive_kill_programDescription_regex",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "[REGEX] Kill Incentives by Program Description",
+          "placeholder": "Regex",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_alwaysStack_programDescription": {
+          "key": "fdi_incentive_alwaysStack_programDescription",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Always Stack Program Descriptions",
+          "placeholder": "Program Descriptions",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_alwaysStack_programDescription_regex": {
+          "key": "fdi_incentive_alwaysStack_programDescription_regex",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "[REGEX] Always Stack Program Descriptions",
+          "placeholder": "Program Descriptions",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_force_previousOwnership": {
+          "key": "fdi_incentive_force_previousOwnership",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Apply Incentive if Previous Ownership Matches",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_force_programDescription": {
+          "key": "fdi_incentive_force_programDescription",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Apply Incentive if Program Description Matches",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_homespecial_force_programDescription": {
+          "key": "fdi_incentive_homespecial_force_programDescription",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Apply Incentive if Program Description Matches and Vehicle is Marked as Homepage Special",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_ignore_groupAffiliation_programDescription": {
+          "key": "fdi_incentive_ignore_groupAffiliation_programDescription",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Ignore Group Affiliation for Program Description",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_allowed_previousOwnership": {
+          "key": "fdi_incentive_allowed_previousOwnership",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Allow Additional Previous Ownerships",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_geo_blacklist": {
+          "key": "fdi_incentive_geo_blacklist",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "GEO Blacklist",
+          "placeholder": "",
+          "search_tags": ["incentive"],
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_id_blacklist": {
+          "key": "fdi_incentive_id_blacklist",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Incentive ID Blacklist",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_kill_duplicates": {
+          "key": "fdi_incentive_kill_duplicates",
+          "component": "checkbox",
+          "src": "option",
+          "default": "",
+          "tab": "Site",
+          "label": "Kill Duplicate Incentives",
+          "placeholder": "",
+          "dataType": "bool",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_chevy_scraper_url": {
+          "key": "fdi_incentive_chevy_scraper_url",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Scraper",
+          "label": "Chevy Scraper URL",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_gmc_scraper_url": {
+          "key": "fdi_incentive_gmc_scraper_url",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Scraper",
+          "label": "GMC Scraper URL",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        },
+        "fdi_incentive_buick_scraper_url": {
+          "key": "fdi_incentive_buick_scraper_url",
+          "component": "text",
+          "src": "option",
+          "default": "",
+          "tab": "Scraper",
+          "label": "Buick Scraper URL",
+          "placeholder": "",
+          "dataType": "string",
+          "componentSettings": {
+            "clearable": true
+          },
+          "value": ""
+        }
+      }
+    }
+  },
+  "success": true,
+  "status": 200
+}

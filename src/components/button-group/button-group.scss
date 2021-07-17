@@ -1,0 +1,10 @@
+@use '../../styles/component';
+
+:host {
+  display: inline-block;
+}
+
+.button-group {
+  display: flex;
+  flex-wrap: nowrap;
+}
